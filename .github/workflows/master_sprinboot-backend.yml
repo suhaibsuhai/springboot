@@ -47,8 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: java-app
-
-      # Login to Azure
+      
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -56,11 +55,11 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_894772C62235423BB560931055712B18 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0AB04CC5E5B54342B5759B0F3614BB9E }}
 
-      # Deploy to Azure Web App
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'springboot-backend'
+          app-name: 'sprinboot-backend'
           slot-name: 'Production'
           package: '*.jar'
+          
