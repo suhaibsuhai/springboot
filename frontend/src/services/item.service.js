@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:8081/items';
+const apiUrl = 'https://sprinboot-backend.azurewebsites.net/items';
 
 const getItems = () => {
   return axios.get(apiUrl);
