@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/items")
-@CrossOrigin(origins = "https://sprinboot-backend.azurewebsites.net")  // Corrected here: URL is now a string in double quotes
+
 public class ItemController {
 
     @Autowired
