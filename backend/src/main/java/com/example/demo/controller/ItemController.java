@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/items")
+@CrossOrigin(origins = "https://sprinboot-backend.azurewebsites.net")  // Corrected here: URL is now a string in double quotes
 public class ItemController {
 
     @Autowired
